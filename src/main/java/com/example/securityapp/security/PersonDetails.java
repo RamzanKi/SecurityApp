@@ -18,7 +18,7 @@ public class PersonDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // SHOW_ACCOUNT, WITHDRAW_MONEY, SEND_MONEY
+        // SHOW_ACCOUNT, WITHDRAW_MONEY, SEND_MONEY - может быть реализация со списком действий для юзера
         // ROLE_ADMIN, ROLE_USER - это роли
         return Collections.singletonList(new SimpleGrantedAuthority(person.getRole()));
     }
